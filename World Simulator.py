@@ -2,11 +2,18 @@
 #In game statistics based on real life
 #V0.1
 #Author Luke Dunn
+#List of people who helped:
+#youtube.com/user/Willbl3pic101 (william@williambl.com) added 8 lines of code
+#Someone else (email@email.com) added X lines of code
 import time
 import turtle
+import antigravity
+from datetime import datetime
+from random import randint
 
 tag = 0
 runs = 0
+gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
 print("[Luke Dunn's Game of Life]")
 time.sleep(0.1)
 print()
@@ -43,7 +50,14 @@ while active == 1:
     while cycle < runs+1:
         print(cycle)
         cycle = cycle+1
+        #Day
+        print '"The day is " + gametime
+        #Add code to change day...
         #Population
+        meechance = randint(0,1000) #Mass Extinction Event Chance is one in 1001.
+        if meechance == 5
+            ppla = 0
+            ppld = ppl
         if ppl < 2.5:
             ppla = 0
             ppld = ppl
