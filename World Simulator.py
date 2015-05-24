@@ -4,7 +4,7 @@
 #Main Author Luke Dunn
 #Others Involved:
 #youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added 48 lines of code
-#youtube.com/user/Willbl3pic101 (william@williambl.com) added 8 lines of code
+#youtube.com/user/Willbl3pic101 (william@williambl.com) added 9 lines of code
 #someone else (xxx@email.com) added x lines of code
 import time
 import turtle
@@ -14,15 +14,12 @@ from random import randint
 
 tag = 0
 runs = 0
+now = datetime.now()
 gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
-#Please look at the errors you have made. I don't know if it works on your PC, but it won't run on mine for these errors:
-#Traceback (most recent call last):
-#File "C:\Users\Luke\Documents\GitHub\GodSim\World Simulator.py", line 17, in <module>
-#gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
-#NameError: name 'now' is not defined
 print("[Luke Dunn's Game of Life]")
 time.sleep(0.1)
-print()
+print
+print "It is " + gametime
 #Temperature
 print("[Select an average temperature of the region. (Celcius)]")
 tmp = int(input())
@@ -41,15 +38,15 @@ ppla = ppl
 ppld = 0
 pplb = 0
 ppli = 0
-print()
+print
 #Development
 print("[Select a stage of development for the region. (1-5)]")
 dlp = int(input())
-print()
+print
 #
 #
 #
-print()
+print
 active = 1
 while active == 1:
     cycle = 1
