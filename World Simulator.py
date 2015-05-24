@@ -1,10 +1,11 @@
 #Game of Life
 #In game statistics based on real life
 #V0.1
-#Author Luke Dunn
-#List of people who helped:
+#Main Author Luke Dunn
+#Others Involved:
+#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added 48 lines of code
 #youtube.com/user/Willbl3pic101 (william@williambl.com) added 8 lines of code
-#Someone else (email@email.com) added X lines of code
+#someone else (xxx@email.com) added x lines of code
 import time
 import turtle
 import antigravity
@@ -14,6 +15,11 @@ from random import randint
 tag = 0
 runs = 0
 gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
+#Please look at the errors you have made. I don't know if it works on your PC, but it won't run on mine for these errors:
+#Traceback (most recent call last):
+#File "C:\Users\Luke\Documents\GitHub\GodSim\World Simulator.py", line 17, in <module>
+#gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
+#NameError: name 'now' is not defined
 print("[Luke Dunn's Game of Life]")
 time.sleep(0.1)
 print()
@@ -51,11 +57,11 @@ while active == 1:
         print(cycle)
         cycle = cycle+1
         #Day
-        print '"The day is " + gametime
+        print('"The day is " + gametime')
         #Add code to change day...
         #Population
         meechance = randint(0,1000) #Mass Extinction Event Chance is one in 1001.
-        if meechance == 5
+        if meechance == 5:
             ppla = 0
             ppld = ppl
         if ppl < 2.5:
