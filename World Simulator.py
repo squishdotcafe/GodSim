@@ -8,7 +8,7 @@
 #someone else (xxx@email.com) added x lines of code
 import time
 import turtle
-import antigravity
+#import antigravity
 from datetime import datetime
 from random import randint
 
@@ -19,7 +19,7 @@ gametime = "%s/%s/%s" % (now.day, now.month, now.year) #setting time to IRL time
 print("[Luke Dunn's Game of Life]")
 time.sleep(0.1)
 print
-print "It is " + gametime
+print("It is ",gametime)
 #Temperature
 print("[Select an average temperature of the region. (Celcius)]")
 tmp = int(input())
@@ -42,7 +42,7 @@ print
 #Development
 print("[Select a stage of development for the region. (1-5)]")
 dlp = int(input())
-print
+print()
 #
 #
 #
@@ -54,7 +54,7 @@ while active == 1:
         print(cycle)
         cycle = cycle+1
         #Day
-        print('"The day is " + gametime')
+        print("The day is " + gametime)
         #Add code to change day...
         #Population
         meechance = randint(0,1000) #Mass Extinction Event Chance is one in 1001.
@@ -88,6 +88,11 @@ while active == 1:
     command = 1
     while command == 1:
         cmd,tag = input().split()
+        if cmd == '/help':
+            try:
+                tag = int(tag)
+            except ValueError:
+                print("Ah, the days of '/help potato'.")
         if cmd == '/help':
             print("##Generic")
             print("  /run <number of cycles>")
