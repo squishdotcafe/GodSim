@@ -2,9 +2,9 @@
 #In game statistics based on real life
 #V0.1
 #Main Author Luke Dunn
-#Others Involved:
-#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added x-9 lines of code
-#youtube.com/user/Willbl3pic101 (william@williambl.com) added 9 lines of code
+#Others Involved
+#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added x-10 lines of code
+#youtube.com/user/Willbl3pic101 (william@williambl.com) added 10 lines of code
 #someone else (xxx@email.com) added x lines of code
 import time
 import turtle
@@ -74,6 +74,7 @@ while active == 1:
             tmps = tmps*-1
         tmpd = 1-(tmps/1000)
         tmpb = 1-(tmps/100)
+        co = co+(dlp/100)
         #Old births/deaths related to temperature code
         #tmpd = tmp*1.000476190476
         #tmpb = tmp*1.048
