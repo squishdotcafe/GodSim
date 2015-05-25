@@ -25,11 +25,11 @@ print("It is ",gametime)
 print("[Select an average temperature of the region. (Celcius)]")
 tmp = int(input())
 tmps = tmp-21
-ox = 0
-co = 0
-ni = 0
-ar = 0
-ot = 0
+ox = 20
+co = 0.5
+ni = 78
+ar = 0.5
+ot = 1
 tmpd = 1
 tmpb = 1
 print()
