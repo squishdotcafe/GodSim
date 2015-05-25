@@ -3,7 +3,7 @@
 #V0.1
 #Main Author Luke Dunn
 #Others Involved:
-#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added 48 lines of code
+#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added x-9 lines of code
 #youtube.com/user/Willbl3pic101 (william@williambl.com) added 9 lines of code
 #someone else (xxx@email.com) added x lines of code
 import time
@@ -145,7 +145,7 @@ while active == 1:
                 print('Born:  ',int(round(pplb)))
                 print()
             if tag == 'atmosphere':
-                print('Temperature:',tmp+21,'*C')
+                print('Temperature:',tmp,'*C')
                 print()
                 print('Carbon Dioxide %:',co)
                 print('Oxygen %        :',ox)
@@ -160,7 +160,8 @@ while active == 1:
                 turtle.hideturtle()
                 turtle.color('white')
                 turtle.left(90)
-                turtle.forward(500)
+                turtle.forward(ppl+pplb+ppld)
+                turtle.left(90)
                 turtle.right(180)
                 turtle.color('black')
                 turtle.right(90)
