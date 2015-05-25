@@ -30,8 +30,11 @@ co = 0.04
 ni = 78.079
 ar = 0.934
 ot = 0.001
+cos = co+0.96
 tmpd = 1
 tmpb = 1
+gasbox = 1
+gasdox = 1
 print()
 #Population
 print("[Select an estimated population of the region. (1-1000)]")
@@ -68,21 +71,42 @@ while active == 1:
         print(gametime)
         #Add code to change day...
         #Atmosphere
-        tmp = tmp*1.00000000000924426
+        ##Temperature
+        tmp = (tmp*1.00000000000924426)*cos #Carbon Dioxide emission makes the temperature higher.
         tmps = tmp-21
         if tmps < 0:
             tmps = tmps*-1
         tmpd = 1-(tmps/1000)
         tmpb = 1-(tmps/100)
-        co = co+(dlp/100)
+        ##Gases
+        co = co+(co*(dlp/100))
+        if ox < 0:
+            ox = 0
+        if co < 0:
+            co = 0
+        if ni < 0:
+            ni = 0
+        if ar < 0:
+            ar = 0
+        if ot < 0:
+            ot = 0
         if ox+co+ni+ar+ot > 100:  #Making sure that percentages are under 100 (gastemp is a temporary variable for gasses)
-            gastemp = (ox+co+ni+ar+ot) - 100
-            gastemp = gastemp / 5
-            ox = ox - gastemp
-            co = co - gastemp
-            ni = ni - gastemp
-            ar = ar - gastemp
-            ot = ot - gastemp
+            gastemp = (ox+co+ni+ar+ot)-100
+            gastemp = gastemp/5
+            ox = ox-gastemp
+            co = co-gastemp
+            ni = ni-gastemp
+            ar = ar-gastemp
+            ot = ot-gastemp
+
+        if ox < 5:
+            gasbox = 0.5
+            gasdox = 1.5
+            if ox < 1:
+                gasbox = 0
+                ppla = 0
+                ppld = ppl+pplb-ppla
+        cos = co+0.96
         #Old births/deaths related to temperature code
         #tmpd = tmp*1.000476190476
         #tmpb = tmp*1.048
@@ -100,8 +124,8 @@ while active == 1:
             ppla = 0
             ppld = ppl
         if ppl > 1:
-            ppld = ppld+((ppla*0.00009)*tmpd)
-            pplb = pplb+((ppla*0.00019)*tmpb)
+            ppld = ppld+(((ppla*0.00009)*tmpd)*gasdox)
+            pplb = pplb+(((ppla*0.00019)*tmpb)*gasbox)
             ppla = ppl+int(round(pplb))-int(round(ppld))
         if ppla < 0:
             ppla = 0
