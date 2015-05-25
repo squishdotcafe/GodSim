@@ -3,8 +3,8 @@
 #V0.1
 #Main Author Luke Dunn
 #Others Involved
-#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added x-10 lines of code
-#youtube.com/user/Willbl3pic101 (william@williambl.com) added 10 lines of code
+#youtube.com/user/Mooshimity (myemailistemporary@gmail.com) added x-23 lines of code
+#youtube.com/user/Willbl3pic101 (william@williambl.com) added 23 lines of code
 #someone else (xxx@email.com) added x lines of code
 import time
 import turtle
@@ -75,6 +75,14 @@ while active == 1:
         tmpd = 1-(tmps/1000)
         tmpb = 1-(tmps/100)
         co = co+(dlp/100)
+        if ox+co+ni+ar+ot > 100:  #Making sure that percentages are under 100 (gastemp is a temporary variable for gasses)
+            gastemp = (ox+co+ni+ar+ot) - 100
+            gastemp = gastemp / 5
+            ox = ox - gastemp
+            co = co - gastemp
+            ni = ni - gastemp
+            ar = ar - gastemp
+            ot = ot - gastemp
         #Old births/deaths related to temperature code
         #tmpd = tmp*1.000476190476
         #tmpb = tmp*1.048
