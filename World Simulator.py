@@ -44,6 +44,11 @@ ppld = 0
 pplb = 0
 ppli = 0
 print()
+#Density
+print("[Select an estimated population density of the region. (Per Square Metre)]")
+dns = int(input())
+dns = ((dns-1)/10)+1
+print()
 #Development
 print("[Select a stage of development for the region. (1-5)]")
 dlp = int(input())
@@ -124,9 +129,9 @@ while active == 1:
             ppla = 0
             ppld = ppl
         if ppl > 1:
-            ppld = ppld+(((ppla*0.00009)*tmpd)*gasdox)
+            ppld = ppld+((((ppla*0.00009)*tmpd)*gasdox)*dns)
             pplb = pplb+(((ppla*0.00019)*tmpb)*gasbox)
-            ppla = ppl+int(round(pplb))-int(round(ppld))
+            ppla = ppl+(int(round(pplb)))-(int(round(ppld)))
         if ppla < 0:
             ppla = 0
         if pplb < 0:
